@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <header>
+      <h1>The<strong>Anime</strong>App</h1>
+    </header>
+
+    <form class="search_box">
+      <input
+        type="search"
+        class="Search-field"
+        placeholder="Search for an anime..."
+      />
+    </form>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default {};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+header {
+  padding: 50px 0;
+  h1 {
+    color: #888;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  strong {
+    color: #313131;
+  }
 }
 </style>
