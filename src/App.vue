@@ -2,20 +2,35 @@
   <div class="app">
     <header>
       <h1>The<strong>Anime</strong>App</h1>
-    </header>
-
-    <form class="search_box">
+      <form class="search_box">
       <input
         type="search"
         class="Search-field"
         placeholder="Search for an anime..."
       />
     </form>
+    </header>
+
+    <main>
+      <div class="cards">
+<Card />
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-export default {};
+import Card from "./components/Card"
+export default {
+  components: {
+    Card
+  }
+  // setup() {
+  //   return {
+  //     Card
+  //     }
+  // }
+};
 </script>
 
 <style lang="scss">
@@ -39,6 +54,41 @@ header {
   }
   strong {
     color: #313131;
+  }
+  .search_box{
+  text-align: center;
+  input{
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    border: none;
+    height: 50px;
+    padding: 5px 10px;
+    outline: none;
+    background: none;
+    appearance: none;
+    background-color: #f3f3f3;
+    box-shadow: 0px 4px 8px rgba($color: #000000, $alpha: 0.15);
+    border-radius: 10px;
+    color: #313131;
+    font-size: 20px;
+    transition: 0.4s;
+
+    &::placeholder{
+      color: #aaa;
+    }
+  }
+}
+}
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
   }
 }
 </style>
